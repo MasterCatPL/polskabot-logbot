@@ -157,7 +157,7 @@ function send() {
 		if (msgRaw == '') return;
 		try {
 			process.stdout.write(msgRaw);
-			let chans = client.channels.cache.filter(channel => channel.type === 'text').filter(channel => channel.name === 'tf2-chat-relay').array();
+			let chans = client.channels.cache.filter(channel => channel.type === 'text').filter(channel => channel.name === 'polskahook-salmon').array();
 			for (let channel of chans) {
 				channel.send(msg);
 			}
